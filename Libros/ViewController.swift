@@ -12,7 +12,20 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        BookRepository.getBooks(completionHandler: { books, error in
+            
+            if let error = error{
+                print(error)
+            }
+            
+            else {
+                print(books)
+            }
+            
+            
+        })
+        
     }
 
 

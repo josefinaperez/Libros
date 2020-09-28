@@ -1,0 +1,6 @@
+framework module Pods_Libros {
+  umbrella header "Pods-Libros-umbrella.h"
+
+  export *
+  module * { export * }
+}

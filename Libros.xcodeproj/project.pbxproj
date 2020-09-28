@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,9 +13,15 @@
 		D9B2E9D725228B2300A11D07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9B2E9D525228B2300A11D07 /* Main.storyboard */; };
 		D9B2E9D925228B2A00A11D07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9B2E9D825228B2A00A11D07 /* Assets.xcassets */; };
 		D9B2E9DC25228B2A00A11D07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9B2E9DA25228B2A00A11D07 /* LaunchScreen.storyboard */; };
+		D9B2E9E4252292BD00A11D07 /* BookRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B2E9E3252292BD00A11D07 /* BookRepository.swift */; };
+		D9B2E9E6252294BD00A11D07 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B2E9E5252294BD00A11D07 /* Book.swift */; };
+		E3A689CE0A3792843556AC5C /* Pods_Libros.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47EF53FE2DF5ADD50731080E /* Pods_Libros.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3DF4C9ED1EB2090B605A025E /* Pods-Libros.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Libros.release.xcconfig"; path = "Target Support Files/Pods-Libros/Pods-Libros.release.xcconfig"; sourceTree = "<group>"; };
+		47EF53FE2DF5ADD50731080E /* Pods_Libros.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Libros.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		58D43032A036BAB3FDBF0816 /* Pods-Libros.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Libros.debug.xcconfig"; path = "Target Support Files/Pods-Libros/Pods-Libros.debug.xcconfig"; sourceTree = "<group>"; };
 		D9B2E9CC25228B2300A11D07 /* Libros.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Libros.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9B2E9CF25228B2300A11D07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9B2E9D125228B2300A11D07 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +30,8 @@
 		D9B2E9D825228B2A00A11D07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D9B2E9DB25228B2A00A11D07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D9B2E9DD25228B2A00A11D07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9B2E9E3252292BD00A11D07 /* BookRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRepository.swift; sourceTree = "<group>"; };
+		D9B2E9E5252294BD00A11D07 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +39,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3A689CE0A3792843556AC5C /* Pods_Libros.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9FA647DC73112AE5078AE730 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				58D43032A036BAB3FDBF0816 /* Pods-Libros.debug.xcconfig */,
+				3DF4C9ED1EB2090B605A025E /* Pods-Libros.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		D9B2E9C325228B2300A11D07 = {
 			isa = PBXGroup;
 			children = (
 				D9B2E9CE25228B2300A11D07 /* Libros */,
 				D9B2E9CD25228B2300A11D07 /* Products */,
+				9FA647DC73112AE5078AE730 /* Pods */,
+				FB7BEA52EDF8CF8B9B7396DF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,11 +80,21 @@
 				D9B2E9D125228B2300A11D07 /* SceneDelegate.swift */,
 				D9B2E9D325228B2300A11D07 /* ViewController.swift */,
 				D9B2E9D525228B2300A11D07 /* Main.storyboard */,
+				D9B2E9E3252292BD00A11D07 /* BookRepository.swift */,
+				D9B2E9E5252294BD00A11D07 /* Book.swift */,
 				D9B2E9D825228B2A00A11D07 /* Assets.xcassets */,
 				D9B2E9DA25228B2A00A11D07 /* LaunchScreen.storyboard */,
 				D9B2E9DD25228B2A00A11D07 /* Info.plist */,
 			);
 			path = Libros;
+			sourceTree = "<group>";
+		};
+		FB7BEA52EDF8CF8B9B7396DF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				47EF53FE2DF5ADD50731080E /* Pods_Libros.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +104,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D9B2E9E025228B2A00A11D07 /* Build configuration list for PBXNativeTarget "Libros" */;
 			buildPhases = (
+				ABCFCF236CEA34CEA4090847 /* [CP] Check Pods Manifest.lock */,
 				D9B2E9C825228B2300A11D07 /* Sources */,
 				D9B2E9C925228B2300A11D07 /* Frameworks */,
 				D9B2E9CA25228B2300A11D07 /* Resources */,
+				9E3B0E0EAFC7D4E46FFC6DAC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,6 +165,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9E3B0E0EAFC7D4E46FFC6DAC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Libros/Pods-Libros-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Libros/Pods-Libros-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Libros/Pods-Libros-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ABCFCF236CEA34CEA4090847 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Libros-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D9B2E9C825228B2300A11D07 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -140,6 +214,8 @@
 			files = (
 				D9B2E9D425228B2300A11D07 /* ViewController.swift in Sources */,
 				D9B2E9D025228B2300A11D07 /* AppDelegate.swift in Sources */,
+				D9B2E9E4252292BD00A11D07 /* BookRepository.swift in Sources */,
+				D9B2E9E6252294BD00A11D07 /* Book.swift in Sources */,
 				D9B2E9D225228B2300A11D07 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,6 +358,7 @@
 		};
 		D9B2E9E125228B2A00A11D07 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58D43032A036BAB3FDBF0816 /* Pods-Libros.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -299,6 +376,7 @@
 		};
 		D9B2E9E225228B2A00A11D07 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DF4C9ED1EB2090B605A025E /* Pods-Libros.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
