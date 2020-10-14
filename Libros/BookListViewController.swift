@@ -15,6 +15,10 @@ class BookListViewController: UIViewController, BookListViewProtocol {
     
     @IBOutlet var tableView: UITableView!
     @IBOutlet var btnSort: UIButton!
+    @IBOutlet var btnAvailabel: UIButton!
+    @IBOutlet var btnNotAvailable: UIButton!
+    @IBOutlet var btnShowAll: UIButton!
+    
     let alert = UIAlertController(title: "Bienvenido a la biblioteca de Ualá", message: nil, preferredStyle: .alert)
     var books: [Book] = []
     
@@ -34,6 +38,9 @@ class BookListViewController: UIViewController, BookListViewProtocol {
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
         
         btnSort.setTitle("Ordenar", for: .normal)
+        btnAvailabel.setTitle("Disponibles", for: .normal)
+        btnNotAvailable.setTitle("No disponibles", for: .normal)
+        btnShowAll.setTitle("Ver todo", for: .normal)
         
     }
     
@@ -50,6 +57,17 @@ class BookListViewController: UIViewController, BookListViewProtocol {
         presenter?.sortBooks()
     }
     
+    @IBAction func showAvailable(){
+        presenter?.showAvailable()
+    }
+    
+    @IBAction func showNotAvailable(){
+        presenter?.showNotAvailable()
+    }
+    
+    @IBAction func showAll(){
+        presenter?.showAll()
+    }
 }
 
 extension BookListViewController: UITableViewDelegate, UITableViewDataSource{

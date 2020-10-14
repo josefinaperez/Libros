@@ -9,8 +9,7 @@
 import Foundation
 
 class BookListPresenter: BookListPresenterProtocol{
-  
-    
+   
     var view: BookListViewProtocol?
     var books: [Book] = []
     
@@ -37,5 +36,17 @@ class BookListPresenter: BookListPresenterProtocol{
         books.reverse()
         view?.showBooks(books: books)
       }
+    
+    func showAvailable() {
+        view?.showBooks(books: books.filter({ $0.availability }))
+    }
+    
+    func showNotAvailable() {
+        view?.showBooks(books: books.filter({ $0.availability == false}))
+    }
+    
+    func showAll() {
+        view?.showBooks(books: books)
+       }
 
 }
