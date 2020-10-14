@@ -14,8 +14,11 @@ class BookListViewController: UIViewController, BookListViewProtocol {
     var presenter: BookListPresenterProtocol?
     
     @IBOutlet var tableView: UITableView!
+    @IBOutlet var btnSort: UIButton!
     let alert = UIAlertController(title: "Bienvenido a la biblioteca de Ualá", message: nil, preferredStyle: .alert)
     var books: [Book] = []
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +33,8 @@ class BookListViewController: UIViewController, BookListViewProtocol {
         self.present(alert, animated: true)
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
         
+        btnSort.setTitle("Ordenar", for: .normal)
+        
     }
     
     func showError(error: Error) {
@@ -40,6 +45,11 @@ class BookListViewController: UIViewController, BookListViewProtocol {
         self.books = books
         tableView.reloadData()
     }
+    
+    @IBAction func sort() {
+        presenter?.sortBooks()
+    }
+    
 }
 
 extension BookListViewController: UITableViewDelegate, UITableViewDataSource{

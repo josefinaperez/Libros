@@ -9,7 +9,10 @@
 import Foundation
 
 class BookListPresenter: BookListPresenterProtocol{
+  
+    
     var view: BookListViewProtocol?
+    var books: [Book] = []
     
     func getBooks() {
         BookRepository.getBooks(completionHandler: {
@@ -20,12 +23,19 @@ class BookListPresenter: BookListPresenterProtocol{
             }
             
             else{
+                
                 let sortedBooks = books.sorted(by: { $0.popularity > $1.popularity })
-                self.view?.showBooks(books: sortedBooks)
+                         self.view?.showBooks(books: sortedBooks)
+                self.books = sortedBooks
             }
+            
             
         })
     }
     
-    
+    func sortBooks() {
+        books.reverse()
+        view?.showBooks(books: books)
+      }
+
 }

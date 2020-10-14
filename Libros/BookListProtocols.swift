@@ -17,4 +17,5 @@ protocol BookListViewProtocol{
 protocol BookListPresenterProtocol{
     var view: BookListViewProtocol? {get set}
     func getBooks()
+    func sortBooks()
 }

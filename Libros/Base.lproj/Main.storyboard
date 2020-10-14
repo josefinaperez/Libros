@@ -115,6 +115,9 @@
                                             <constraint firstAttribute="height" constant="40" id="YTe-xd-0h4"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="sort" destination="BYZ-38-t0r" eventType="touchUpInside" id="SkV-cC-xmc"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kBO-Zt-5vV">
                                         <rect key="frame" x="143.5" y="0.0" width="127" height="40"/>
@@ -147,6 +150,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="13o-GI-xzk"/>
                     <connections>
+                        <outlet property="btnSort" destination="3W2-pE-eDj" id="5yi-I1-r6b"/>
                         <outlet property="tableView" destination="9fh-ys-bmP" id="PAp-RW-CNv"/>
                     </connections>
                 </viewController>
